@@ -1,0 +1,31 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.novoda:bintray-release:0.4.0'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    userOrg = 'polyak01'
+    groupId = 'com.steelkiwi'
+    uploadName = 'cropiwa'
+    description = 'Configurable Custom Crop widget for Android'
+    publishVersion = '1.0.3'
+    licences = ['Apache-2.0']
+}
+
